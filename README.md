@@ -1,28 +1,82 @@
 # NLPexam
+
+# ADSM - (Almost) Detecting Spam Messages
 Exam of July 2023
 
-📱 "ADSM - (Almost) Detecting Spam Messagesr" - A Natural Language Processing Project 📬
 
-I embarked on an intriguing journey into the realm of Natural Language Processing (NLP) with my project "ADSM - (Almost) Detecting Spam Messages" 🧠
 
-🔸 Project Context:
-The project involved working with the SMS Spam Collection, a dataset of 5,574 SMS messages in English, each tagged as either "ham" (legitimate) or "spam." The dataset served as a valuable resource for SMS spam research, offering insights into identifying and distinguishing between legitimate and unwanted messages.
+# NLPexam
 
-🔹 Dataset Description:
-Each message in the dataset was structured with two columns:
-1. "v1" - Contained the label (ham or spam).
-2. "v2" - Contained the raw text of the SMS message.
+**Exam Date: [Month] [Year]**
 
-This corpus was collated from a variety of sources, including:
-➡️ A collection of 425 SMS spam messages from the Grumbletext website.
-➡️ A subset of 3,375 randomly selected "ham" messages from the NUS SMS Corpus.
-➡️ A list of 450 "ham" messages from Caroline Tag's PhD Thesis.
-➡️ The SMS Spam Corpus v.0.1 Big, which consisted of 1,002 "ham" messages and 322 spam messages.
+📚 "Text Classification: Spam vs. Ham" - A Natural Language Processing (NLP) Project 📩
 
-🔹 Project Objectives:
-The primary objective of the "ADSM - (Almost) Detecting Spam Messages" project was to build a robust NLP model capable of classifying SMS messages as either "ham" (legitimate) or "spam." This entailed natural language understanding, text classification, and the ability to identify unwanted messages.
+In our NLPexam project, we tackle the challenge of creating a machine learning classifier model that can binary predict whether a given SMS message is spam or ham (non-spam). We approach this text classification task with a focus on preprocessing, data analysis, and model selection.
 
-🔸 NLP Approach:
-To accomplish this, I designed and trained a natural language processing model that leveraged machine learning techniques to analyze and classify the content of SMS messages. This model was developed to be proficient in discerning the nuances of text data, making it adept at identifying spam messages and safeguarding users against unsolicited content.
+## Table of Contents
 
-This project expanded my knowledge of NLP, demonstrating the power of language processing in tackling real-world problems like spam detection.
+- [Introduction](#introduction)
+- [Data](#data)
+- [Methodology](#methodology)
+- [Models](#models)
+- [Results](#results)
+- [Issues Encountered](#issues-encountered)
+- [Project Recap](#project-recap)
+- [Final Conclusion](#final-conclusion)
+- [Contributing](#contributing)
+
+## Introduction
+
+In this NLP exam project, the aim was to develop a binary classifier capable of distinguishing between spam and non-spam (ham) SMS messages. The work of me and my colleagues encompasses various aspects of NLP, including data preprocessing, cleaning, and the application of machine learning techniques.
+
+## Data
+
+The dataset provided is in .csv format and consists of 5572 sentences (SMS messages) along with their corresponding classifications (spam or ham). Notably, the dataset is highly unbalanced, with spam messages accounting for approximately 13% of the entire dataset. To mitigate this class imbalance, we employ the RandomOverSampler technique to duplicate some random elements from the minority class, making it less outnumbered.
+
+## Methodology
+
+We follow a structured methodology for our NLP project, including:
+
+- Checking for duplicates and cleaning the dataset.
+- Removing short messages with less than three characters.
+- Removing English stop words and other common words used in messages.
+- Applying stemming to reduce words to their base form.
+- Splitting the dataset and using RandomOverSampler to balance the classes.
+- Utilizing CountVectorizer to convert text documents into token counts.
+- Employing TF-IDF to capture word importance.
+- Using word embeddings with two strategies: BPE + PyTorch and GloVe.
+
+## Models
+
+Our project explores the performance of three distinct models:
+
+1. **XGBoost**: A gradient-boosted decision tree classifier, suitable for handling high-dimensional, sparse data.
+2. **LSTM**: A recurrent neural network (RNN) with Long Short-Term Memory cells designed to process sequential data.
+3. **BERT**: Bidirectional Encoder Representations from Transformers, an advanced language model for text classification.
+
+## Results
+
+We present the results achieved using different strategies and models. These results include accuracy scores, F1 scores, and confusion matrices. Notably, XGBoost outperformed other models in terms of accuracy and F1 score.
+
+## Issues Encountered
+
+Throughout the project, we encountered some challenges, including handling dataset formats, resource limitations in Google Colab, and balancing the dataset.
+
+## Project Recap
+
+In summary, our project involved several key steps, including transforming the NUS SMS corpus for BPE training, preprocessing the dataset, implementing RandomOverSampler, creating document-term matrices, applying TF-IDF, and experimenting with different word embeddings. We evaluated three models to classify SMS messages and compared their performance.
+
+## Final Conclusion
+
+Our NLP exam project, though challenging, was a valuable learning experience. We have provided insights into the performance of different models and preprocessing techniques for text classification. We acknowledge that the results may not meet our initial high expectations, but the project has been an opportunity to apply NLP concepts in a real-world context.
+
+
+
+## Contributing
+
+If you have ideas for new features, improvements, or bug fixes, please open an issue or submit a pull request. Let's enhance our NLP project collaboratively.
+
+
+
+
+
