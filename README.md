@@ -1,13 +1,7 @@
 # NLPexam
 
 # ADSM - (Almost) Detecting Spam Messages
-Exam of July 2023
-
-
-
-# NLPexam
-
-**Exam Date: [Month] [Year]**
+**Exam Date: July 2023**
 
 📚 "Text Classification: Spam vs. Ham" - A Natural Language Processing (NLP) Project 📩
 
